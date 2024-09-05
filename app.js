@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import logo from "./assets/logo-eato.PNG";
+import image from "./assets/user-icon.png";
 
 const HeaderComponent = () => {
     return (
         <div className="headerContainer">
             <div className="logoContainer">
-                <img src="assets\logo-eato.PNG" alt="company-logo-image" className="mainLogo"></img>
+                <img src={logo} alt="company-logo-image" className="mainLogo"></img>
             </div>
             <div className="navContainer">
                 <ul>
@@ -16,7 +18,7 @@ const HeaderComponent = () => {
                 </ul>
             </div>
             <div className="cartContainer">
-                <img src="assets\user-icon.png" alt="user-icon" className="userIcon"></img>
+                <img src={image} alt="user-icon" className="userIcon"></img>
             </div>
         </div>
     );
