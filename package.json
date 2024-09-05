@@ -8,9 +8,6 @@
     "build": "parcel build index.html",
     "test": "jest"
   },
-  "staticFiles": {
-    "staticPath": "D:/Eato App/assets"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Anushka2912/Eato-Food-Delivering-App.git"
@@ -26,7 +23,6 @@
     "process": "^0.11.10"
   },
   "dependencies": {
-    "@parcel/transformer-image": "^2.12.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
