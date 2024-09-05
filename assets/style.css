@@ -1,0 +1,30 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 30px;
+}
+.mainLogo {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+}
+.userIcon {
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+}
+.navContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.navContainer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    gap: 20px;
+    list-style-type: none;
+}
