@@ -1,18 +1,27 @@
+body {
+    font-family: system-ui;
+}
 .headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
     gap: 30px;
+    border-bottom: 1px solid #000000;
 }
 .mainLogo {
     width: 100%;
     max-width: 80px;
     height: auto;
 }
-.userIcon {
+.cartContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.userIcon, .cartIcon {
     width: 100%;
-    max-width: 30px;
+    max-width: 25px;
     height: auto;
 }
 .navContainer {
@@ -27,4 +36,72 @@
     width: fit-content;
     gap: 20px;
     list-style-type: none;
+}
+.bodyContainer {
+    padding:  30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+.searchContainer {
+    border: 1px solid #de1b23;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    max-width: 600px;
+    align-self: center;
+}
+.search-input {
+    border-radius: 50px;
+    border: 0px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+.search-input:focus-visible {
+    outline: none;
+}
+.search-btn {
+    background-color: #de1b23;
+    border: 1px solid #de1b23;
+    border: 0px;
+    border-radius: 50px;
+    padding: 15px;
+    width: 100%;
+    max-width: 100px;
+}
+.restaurantContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.res-card {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 20px;
+    box-shadow: #00000026 0px 2px 8px;
+}
+.res-image-box {
+    display: flex;
+}
+.res-img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.res-details {
+    padding: 20px 15px;
+    border: 1px solid #00000026;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.res-details p {
+    color: #535353;
 }
