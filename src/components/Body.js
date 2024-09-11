@@ -22,7 +22,7 @@ const BodyComponent = () => {
             className="top-filter-btn global-btn"
             onClick={() => {
                 const filteredList = resList.filter(
-                    (restaurant) => restaurant.data.rating > 4.0
+                    (restaurant) => restaurant.data.rating > 4 
                 );
                 setTopRestaurants(filteredList);
             }}
