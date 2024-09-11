@@ -10,9 +10,9 @@ const HeaderComponent = () => {
             </div>
             <div className="navContainer">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
                 </ul>
             </div>
             <div className="cartContainer">
