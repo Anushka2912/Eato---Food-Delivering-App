@@ -60,7 +60,7 @@ a {
     list-style-type: none;
 }
 .bodyContainer {
-    padding:  50px;
+    padding: 40px 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
