@@ -25,5 +25,9 @@
     "parcel-plugin-static-files-copy": "^2.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "staticFiles": {
+      "staticPath": ["assets", "src/images"],
+      "watcherGlob": "**"
   }
 }
