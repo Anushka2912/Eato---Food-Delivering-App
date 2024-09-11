@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/Header";
 import BodyComponent from "./components/Body";
-import RestaurantCard from "./components/ResataurantCard";
 
 const AppLayout = () => {
     return (
