@@ -1,16 +1,19 @@
+import logo from "../images/logo-eato.jpg";
+
 const FooterComponent = () => {
     return (
-        <div className="footerContainer">
+        <div className="footer-container">
             {/* <div className="footer-top">
                 <div className="newsletter-section">
 
                 </div>
             </div> */}
             <div className="footer-middle">
-                <div className="company-information-section">
+                <div className="company-information-section footer-div">
                     <div className="company-logo">
-                        <img></img>
+                        <img src={logo} alt="company-logo-image" className="mainLogo" />
                     </div>
+                    <p>Providing the best food experience, straight to your door.</p>
                     <div className="social-links">
                         <img></img>
                         <img></img>
@@ -18,33 +21,47 @@ const FooterComponent = () => {
                         <img></img>
                     </div>
                 </div>
-                <div className="quick-links-section">
+                <div className="quick-links-section footer-div">
                     <div className="footer-title">
-                        <h5>Quick Links</h5>
+                        <h4>Quick Links</h4>
                     </div>
                     <div className="footer-navigation">
-
+                        <ul>
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                            <li><a href="#">Link 6</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div className="useful-links-section">
+                <div className="useful-links-section footer-div">
                     <div className="footer-title">
-                        <h5>Useful Links</h5>
+                        <h4>Useful Links</h4>
                     </div>
                     <div className="footer-navigation">
-                        
+                        <ul>
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                            <li><a href="#">Link 6</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div className="contact-section">
+                <div className="contact-section footer-div">
                     <div className="footer-title">
-                        <h5>Contact Us</h5>
+                        <h4>Contact Us</h4>
                     </div>
                     <div className="contact-navigation">
                         
                     </div>
                 </div>
-                <div className="download-app-section">
+                <div className="download-app-section footer-div">
                     <div className="footer-title">
-                        <h5>Download App</h5>
+                        <h4>Download App</h4>
                     </div>
                     <div className="download-app-icons">
 

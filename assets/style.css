@@ -1,5 +1,6 @@
 body {
     font-family: system-ui;
+    margin: 0px;
 }
 h1, h2, h3, h4, h5, h6, p {
     margin: 0px;
@@ -140,4 +141,46 @@ a {
     display: flex;
     justify-content: end;
     gap: 10px;
+}
+.footer-container ul {
+    padding: 0px;
+    margin: 0px;
+}
+.footer-title, .footer-container p {
+    color: #ffffff;
+}
+.footer-middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+    background-color: #333
+}
+.footer-middle .footer-div {
+    flex: 1;
+    min-width: 200px;
+}
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-container ul li {
+    list-style-type: none;
+}
+.footer-container ul li a {
+    color: #ffffff;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #5a5a5a;
+}
+.payment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
