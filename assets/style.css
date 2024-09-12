@@ -61,7 +61,7 @@ a {
     list-style-type: none;
 }
 .bodyContainer {
-    padding: 40px 50px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
