@@ -67,7 +67,7 @@ a {
     gap: 30px;
     justify-content: center;
 }
-.searchContainer {
+.search-Box {
     background-color: #ffffff;
     border: 1px solid #c5c5c5;
     border-radius: 50px;
@@ -155,7 +155,7 @@ a {
     justify-content: space-between;
     gap: 20px;
     padding: 30px;
-    background-color: #2b2b2b
+    background-color: #1a1a19
 }
 #company-information-section {
     flex: 1;
@@ -171,7 +171,7 @@ a {
     gap: 15px;
 }
 .footer-middle {
-    background-color: #2b2b2b;
+    background-color: #1a1a19;
     display: flex;
     justify-content: center;
 }
@@ -186,7 +186,7 @@ a {
     color: #ffffff;
 }
 .footer-bottom {
-    background-color: #5a5a5a;
+    background-color: #262626;
     display: flex;
     justify-content: center;
 }
@@ -195,7 +195,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background-color: #5a5a5a;
+    background-color: #262626;
 }
 .copyright-section p, .payment-section p {
     font-size: 13px;

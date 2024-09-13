@@ -1,10 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import resList from "../utils/mockData";
 import RestaurantCard from "./ResataurantCard";
 import SearchContainer from "./Search";
 
 const BodyComponent = () => {
   const [topRestaurants, setTopRestaurants] = useState(resList);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const list = await fetch("https://run.mocky.io/v3/8f7ba24c-d000-40a8-95ae-c9cc59fe0bdd");
+
+    const json = await list.json();
+    
+    const normalizedData = json.data.map((restaurant) => ({
+        type: "restaurant",
+        data: restaurant
+      }));
+      
+    setTopRestaurants(normalizedData);
+  };
 
   return (
     <div className="bodyContainer">

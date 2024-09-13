@@ -2,7 +2,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "111",
+        "id": "119",
         "name": "Pizza Pizza",
         "address": "123 Main St, Ottawa, ON K1A 1A1",
         "cuisine": "Pizza",
@@ -14,7 +14,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "112",
+        "id": "120",
         "name": "KFC",
         "address": "456 King St, Ottawa, ON K2B 2B2",
         "cuisine": "Fast Food",
@@ -26,7 +26,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "113",
+        "id": "121",
         "name": "Poulet Rouge",
         "address": "789 Queen St, Ottawa, ON K3C 3C3",
         "cuisine": "Rotisserie Chicken",
@@ -38,7 +38,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "114",
+        "id": "122",
         "name": "Masakali",
         "address": "101 Main St, Ottawa, ON K1A 1A1",
         "cuisine": "Indian",
@@ -50,7 +50,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "115",
+        "id": "123",
         "name": "Joey",
         "address": "202 Elm St, Ottawa, ON K2A 2B2",
         "cuisine": "Casual Dining",
@@ -62,7 +62,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "116",
+        "id": "124",
         "name": "Tim Hortons",
         "address": "909 Spruce St, Ottawa, ON K1N 5Z5",
         "cuisine": "Coffee & Donuts",
@@ -74,7 +74,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "117",
+        "id": "125",
         "name": "Dal Moro's",
         "address": "404 Pine St, Ottawa, ON K1A 2A2",
         "cuisine": "Italian",
@@ -86,7 +86,7 @@ const resList = [
     {
     type: "restaurant",
     data: {
-        "id": "118",
+        "id": "126",
         "name": "A&W",
         "address": "505 Birch St, Ottawa, ON K2B 3C3",
         "cuisine": "Fast Food",
