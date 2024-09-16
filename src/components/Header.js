@@ -26,8 +26,7 @@ const HeaderComponent = () => {
           <li>
             <button className="login-logout-btn global-btn" onClick={
               () => {
-                setLoginBtn("Logout");
-                console.log(loginBtn);
+                loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login");
               }
             }
             >
