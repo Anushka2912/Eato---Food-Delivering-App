@@ -60,6 +60,9 @@ a {
     gap: 20px;
     list-style-type: none;
 }
+.login-logout-btn {
+    width: 80px;
+}
 .bodyContainer {
     padding: 40px 30px;
     display: flex;
