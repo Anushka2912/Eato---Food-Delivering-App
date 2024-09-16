@@ -1,8 +1,12 @@
 import logo from "../images/logo-eato.jpg";
 import userIcon from "../images/user-icon.jpg";
 import cartIcon from "../images/shopping-cart.jpg";
+import { useState } from "react";
 
 const HeaderComponent = () => {
+
+  const [loginBtn, setLoginBtn] = useState("Login")
+
   return (
     <div className="headerContainer">
       <div className="logoContainer">
@@ -18,6 +22,17 @@ const HeaderComponent = () => {
           </li>
           <li>
             <a href="">Contact Us</a>
+          </li>
+          <li>
+            <button className="login-logout-btn global-btn" onClick={
+              () => {
+                setLoginBtn("Logout");
+                console.log(loginBtn);
+              }
+            }
+            >
+              {loginBtn}
+            </button>
           </li>
         </ul>
       </div>
