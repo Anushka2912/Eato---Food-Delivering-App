@@ -1,18 +1,18 @@
 import searchIcon from "../images/search-icon.jpg";
 import { useState } from "react";
 
-const SearchContainer = ({allRestaurants, setTopRestaurants}) => {
+const SearchContainer = ({allRestaurants, setListOfRestaurants}) => {
 
   const [searchText, setSearchText] = useState("");
 
   const handleSearch = () => {
     if (searchText.trim() === "") {
-      setTopRestaurants(allRestaurants);
+      setListOfRestaurants(allRestaurants);
     } else {
       const searchList = allRestaurants.filter((result) => 
         result.data.name.toLowerCase().includes(searchText.toLowerCase())
       );
-      setTopRestaurants(searchList);
+      setListOfRestaurants(searchList);
     }
   }
 

@@ -4,7 +4,7 @@ import SearchContainer from "./Search";
 import Shimmer from "./Shimmer";
 
 const BodyComponent = () => {
-  const [topRestaurants, setTopRestaurants] = useState([]);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
 
   useEffect(() => {
@@ -21,18 +21,18 @@ const BodyComponent = () => {
         data: restaurant
       }));
       
-    setTopRestaurants(normalizedData);
+    setListOfRestaurants(normalizedData);
     setAllRestaurants(normalizedData);
   };
 
   return (
     <div className="bodyContainer">
-        <SearchContainer allRestaurants={allRestaurants} setTopRestaurants={setTopRestaurants} />
+        <SearchContainer allRestaurants={allRestaurants} setListOfRestaurants={setListOfRestaurants} />
         <div className="filtersContainer">
             <button
             className="all-filter-btn global-btn"
             onClick={() => {
-                setTopRestaurants(allRestaurants);
+                setListOfRestaurants(allRestaurants);
             }}
             >
             All
@@ -40,20 +40,20 @@ const BodyComponent = () => {
             <button
             className="top-filter-btn global-btn"
             onClick={() => {
-                const filteredList = topRestaurants.filter(
+                const filteredList = listOfRestaurants.filter(
                     (restaurant) => restaurant.data.rating > 4 
                 );
-                setTopRestaurants(filteredList);
+                setListOfRestaurants(filteredList);
             }}
             >
             Top Rated Restaurants
             </button>
         </div>
         <div className="restaurantContainer">
-          {topRestaurants.length === 0 ? (
+          {listOfRestaurants.length === 0 ? (
             <Shimmer />
           ) : (
-          topRestaurants.map((restaurant) => (
+          listOfRestaurants.map((restaurant) => (
             <RestaurantCard key={restaurant.data.id} resData={restaurant} />
           ))
         )}
