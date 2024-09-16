@@ -27,7 +27,7 @@ const BodyComponent = () => {
 
   return (
     <div className="bodyContainer">
-        <SearchContainer />
+        <SearchContainer allRestaurants={allRestaurants} setTopRestaurants={setTopRestaurants} />
         <div className="filtersContainer">
             <button
             className="all-filter-btn global-btn"
