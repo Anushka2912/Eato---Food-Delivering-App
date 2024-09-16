@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import resList from "../utils/mockData";
 import RestaurantCard from "./ResataurantCard";
 import SearchContainer from "./Search";
+import Shimmer from "./Shimmer";
 
 const BodyComponent = () => {
-  const [topRestaurants, setTopRestaurants] = useState(resList);
+  const [topRestaurants, setTopRestaurants] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -47,11 +47,14 @@ const BodyComponent = () => {
             Top Rated Restaurants
             </button>
         </div>
-        <div className="restaurantContainer">{
+        <div className="restaurantContainer">
+          {topRestaurants.length === 0 ? (
+            <Shimmer />
+          ) : (
             topRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+              <RestaurantCard key={restaurant.data.id} resData={restaurant} />
             ))
-        }
+          )}
         </div>
     </div>
   );
