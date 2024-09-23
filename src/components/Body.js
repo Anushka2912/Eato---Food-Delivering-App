@@ -12,7 +12,7 @@ const BodyComponent = () => {
   }, []);
 
   const fetchData = async () => {
-    const list = await fetch("https://run.mocky.io/v3/8f7ba24c-d000-40a8-95ae-c9cc59fe0bdd");
+    const list = await fetch("https://l3rrj.wiremockapi.cloud/");
 
     const json = await list.json();
     
