@@ -2,6 +2,7 @@ import logo from "../images/logo-eato.jpg";
 import userIcon from "../images/user-icon.jpg";
 import cartIcon from "../images/shopping-cart.jpg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
 
@@ -15,13 +16,13 @@ const HeaderComponent = () => {
       <div className="navContainer">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/about">About Us</a>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
-            <a href="/contact">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
             <button className="login-logout-btn global-btn" onClick={
