@@ -24,10 +24,14 @@
   "dependencies": {
     "parcel-plugin-static-files-copy": "^2.6.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "staticFiles": {
-      "staticPath": ["assets", "src/images"],
-      "watcherGlob": "**"
+    "staticPath": [
+      "assets",
+      "src/images"
+    ],
+    "watcherGlob": "**"
   }
 }
