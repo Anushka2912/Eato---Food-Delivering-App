@@ -15,13 +15,13 @@ const HeaderComponent = () => {
       <div className="navContainer">
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="">About Us</a>
+            <a href="/about">About Us</a>
           </li>
           <li>
-            <a href="">Contact Us</a>
+            <a href="/contact">Contact Us</a>
           </li>
           <li>
             <button className="login-logout-btn global-btn" onClick={
