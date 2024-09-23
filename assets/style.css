@@ -72,6 +72,9 @@ button {
     gap: 30px;
     justify-content: center;
 }
+.mainContainer {
+    height: 100vh;
+}
 .search-Box {
     background-color: #ffffff;
     border: 1px solid #c5c5c5;
