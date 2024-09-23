@@ -26,7 +26,8 @@ const BodyComponent = () => {
   };
 
   return (
-    <div className="bodyContainer">
+    <div className="mainContainer">
+      <div className="bodyContainer">
         <SearchContainer allRestaurants={allRestaurants} setListOfRestaurants={setListOfRestaurants} />
         <div className="filtersContainer">
             <button
@@ -50,14 +51,15 @@ const BodyComponent = () => {
             </button>
         </div>
         <div className="restaurantContainer">
-          {listOfRestaurants.length === 0 ? (
-            <Shimmer />
-          ) : (
-          listOfRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.data.id} resData={restaurant} />
-          ))
-        )}
+            {listOfRestaurants.length === 0 ? (
+              <Shimmer />
+            ) : (
+            listOfRestaurants.map((restaurant) => (
+              <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+            ))
+          )}
         </div>
+      </div>
     </div>
   );
 };
