@@ -224,3 +224,14 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    height: 100vh;
+}
+.errorContainer h2 {
+    font-size: 50px;
+}
