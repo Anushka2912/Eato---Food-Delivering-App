@@ -6,13 +6,13 @@ import FooterComponent from "./components/Footer";
 import AboutComponent from "./components/About";
 import ContactComponent from "./components/Contact";
 import ErrorComponent from "./components/Error";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
     return (
         <div className="app">
             <HeaderComponent />
-            <BodyComponent />
+            <Outlet />
             <FooterComponent />
         </div>
     );
@@ -22,16 +22,22 @@ const appRouter = createBrowserRouter([
     {
         path: "/",
         element: <AppLayout />,
+        children: [
+            {
+                path: "/",
+                element: <BodyComponent />,
+            },
+            {
+                path: "/about",
+                element: <AboutComponent />,
+            },
+            {
+                path: "/contact",
+                element: <ContactComponent />,
+            },
+        ],
         errorElement: <ErrorComponent />,
     },
-    {
-        path: "/about",
-        element: <AboutComponent />,
-    },
-    {
-        path: "/contact",
-        element: <ContactComponent />,
-    }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
