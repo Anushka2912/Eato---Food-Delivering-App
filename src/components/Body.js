@@ -4,6 +4,7 @@ import SearchContainer from "./Search";
 import Shimmer from "./Shimmer";
 
 const BodyComponent = () => {
+
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
 

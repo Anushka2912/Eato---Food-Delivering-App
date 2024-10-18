@@ -3,10 +3,13 @@ import userIcon from "../images/user-icon.jpg";
 import cartIcon from "../images/shopping-cart.jpg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const HeaderComponent = () => {
 
   const [loginBtn, setLoginBtn] = useState("Login")
+
+  const onlineStatus = useOnlineStatus();
 
   return (
     <div className="headerContainer">
@@ -24,6 +27,7 @@ const HeaderComponent = () => {
           <li>
             <Link to="/contact">Contact Us</Link>
           </li>
+          <li>Online Status: {onlineStatus ? "Online" : "Offline"}</li>
           <li>
             <button className="login-logout-btn global-btn" onClick={
               () => {
