@@ -12,24 +12,24 @@ const HeaderComponent = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="headerContainer">
+    <div className="flex justify-between items-center gap-10 p-2.5 px-8 border-b border-black headerContainer">
       <div className="logoContainer">
-        <img src={logo} alt="company-logo-image" className="mainLogo" />
+        <img src={logo} alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
       </div>
-      <div className="navContainer">
-        <ul>
+      <div className="w-full flex justify-end navContainer">
+        <ul className="flex justify-between items-center gap-5 list-none">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="text-black">Home</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about" className="text-black">About Us</Link>
           </li>
           <li>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" className="text-black">Contact Us</Link>
           </li>
           <li>Online Status: {onlineStatus ? "Online" : "Offline"}</li>
           <li>
-            <button className="login-logout-btn global-btn" onClick={
+            <button className="bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300" onClick={
               () => {
                 loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login");
               }
@@ -40,9 +40,9 @@ const HeaderComponent = () => {
           </li>
         </ul>
       </div>
-      <div className="cartContainer">
-        <img src={userIcon} alt="user-icon" className="userIcon" />
-        <img src={cartIcon} alt="cart-icon" className="cartIcon" />
+      <div className="flex justify-between gap-2 cartContainer ">
+        <img src={userIcon} alt="user-icon" className="w-full max-w-[25px] h-auto userIcon" />
+        <img src={cartIcon} alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" />
       </div>
     </div>
   );

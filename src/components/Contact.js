@@ -1,8 +1,8 @@
 const ContactComponent = () => {
     return (
-        <div className="mainContainer">
-            <div className="contactContainer">
-                <h2>Contact Page</h2>
+        <div className="h-screen flex items-center justify-center mainContainer">
+            <div className="text-center contactContainer">
+                <h2 className="text-3xl font-bold">Contact Page</h2>
             </div>
         </div>
     );

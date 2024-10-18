@@ -27,12 +27,12 @@ const BodyComponent = () => {
   };
 
   return (
-    <div className="mainContainer">
-      <div className="bodyContainer">
+    <div className="h-screen mainContainer">
+      <div className="flex flex-col gap-8 p-10 bodyContainer">
         <SearchContainer allRestaurants={allRestaurants} setListOfRestaurants={setListOfRestaurants} />
-        <div className="filtersContainer">
+        <div className="flex justify-end gap-2 filtersContainer">
             <button
-            className="all-filter-btn global-btn"
+            className="all-filter-btn bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300"
             onClick={() => {
                 setListOfRestaurants(allRestaurants);
             }}
@@ -40,7 +40,7 @@ const BodyComponent = () => {
             All
             </button>
             <button
-            className="top-filter-btn global-btn"
+            className="top-filter-btn bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300"
             onClick={() => {
                 const filteredList = listOfRestaurants.filter(
                     (restaurant) => restaurant.data.rating > 4 
@@ -51,7 +51,7 @@ const BodyComponent = () => {
             Top Rated Restaurants
             </button>
         </div>
-        <div className="restaurantContainer">
+        <div className="flex flex-wrap justify-between row-gap-12 restaurantContainer">
             {listOfRestaurants.length === 0 ? (
               <Shimmer />
             ) : (

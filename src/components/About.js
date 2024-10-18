@@ -2,9 +2,9 @@ import TeamClass from "./Team";
 const AboutComponent = () => {
 
     return (
-        <div className="mainContainer">
-            <div className="aboutContainer">
-                <h2>About Page</h2>
+        <div className="h-screen flex items-center justify-center mainContainer">
+            <div className="text-center aboutContainer">
+                <h2 className="text-3xl font-bold">About Page</h2>
                 <TeamClass />
             </div>
         </div>
