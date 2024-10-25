@@ -1,0 +1,1 @@
+export const MENU_API = "https://run.mocky.io/v3/";
