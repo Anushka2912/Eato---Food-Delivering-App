@@ -1,4 +1,4 @@
-const ContactComponent = () => {
+const ContactComponent = () => {            
     return (
         <div className="h-screen flex items-center justify-center mainContainer">
             <div className="text-center contactContainer">
