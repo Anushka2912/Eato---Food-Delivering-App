@@ -18,7 +18,7 @@ const RestaurantCard = (props) => {
           </div>
         </div>
         <div className="res-details-bottom">
-          <p>{resData.data.delivery_time}</p>
+          <p>{resData.data.delivery_time_min}</p>
         </div>
       </div>
     </div>
