@@ -62,9 +62,9 @@ const BodyComponent = () => {
               <Shimmer />
             ) : (
             listOfRestaurants.map((restaurant) => (
-              <Link 
-              key={restaurant.data.id}
-              to={"restaurants/" + restaurant.data.id}><RestaurantCard resData={restaurant} /></Link>
+              <Link key={restaurant.data.id} to={"restaurants/" + restaurant.data.id}>
+                <RestaurantCard resData={restaurant} />
+              </Link>
             ))
           )}
         </div>
