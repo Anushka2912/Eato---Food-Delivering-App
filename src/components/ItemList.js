@@ -10,12 +10,20 @@ const ItemList = ({items}) => {
                         <div className="flex flex-col">
                             <span></span>
                             <span className="text-lg font-bold">{item?.card?.info?.name}</span>
-                            <span className="font-bold">Rs {item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100}</span>
+                            <span className="font-bold">Rs&nbsp;
+                                {item?.card?.info?.price
+                                    ? item?.card?.info?.price/100
+                                    : item?.card?.info?.defaultPrice/100
+                                }
+                            </span>
                         </div>
                         <p>{item?.card?.info?.description}</p>
                     </div>
                     <div className="w-2/4 place-items-end">
-                        <img src={CDN_URL + item?.card?.info?.imageId} className="w-[200px]"></img>
+                        <div className="relative">
+                            <img src={CDN_URL + item?.card?.info?.imageId} className="w-[200px]"></img>
+                            <button className="px-8 py-1 bg-white border-[1px] border-gray-200 rounded-lg absolute left-1/2 -bottom-4 transform -translate-x-1/2"><span className="text-lg font-bold text-green-600">ADD</span></button>
+                        </div>
                     </div>
                 </div>
             ))}
