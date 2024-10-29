@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
 
     const resMenuInfo = useRestaurantMenu(resId);
 
-    console.log({resMenuInfo});
+    // console.log({resMenuInfo});
     
     const text = resMenuInfo?.data?.cards?.[0]?.card?.card?.text;
 
@@ -22,17 +22,20 @@ const RestaurantMenu = () => {
         (c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-    console.log( {categories} );
+    // console.log( {categories} );
 
     return resMenuInfo === null ? (
         <Shimmer />
     ) : (
         <div className="mainContainer">
-            <div className="RestaurantHeader flex justify-center items-center bg-slate-300 min-h-96">
+            <div className="RestaurantHeader flex justify-center items-center bg-slate-200 min-h-96">
                 <h2 className="text-4xl font-bold p-5">{text}</h2>
+            </div>
+            <div className="text-lg font-bold text-center px-9 pt-9">
+                Menu
             </div> 
-            <div className="RestaurantMenu w-full flex px-9 py-20 m-auto">
-                <div className="accordianContainer w-fit max-w-[1500px] m-auto">
+            <div className="RestaurantMenu w-full flex px-9 py-9 m-auto">
+                <div className="categoryContainer w-full max-w-[1500px] m-auto">
                     {categories.map((cat, index) => (
                         <RestaurantCategory key={index} data={cat.card?.card}/>
                     ))}
