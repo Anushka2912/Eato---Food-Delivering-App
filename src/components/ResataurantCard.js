@@ -14,18 +14,18 @@ const RestaurantCard = (props) => {
   } = resData?.data?.info;
 
   return (
-    <div className="w-full border border-[#00000026] rounded-2xl shadow-[#00000026] res-card">
-      <div className="flex res-image-box h-[200px]">
+    <div className="w-[300px] border border-[#00000026] rounded-2xl shadow-[#00000026] res-card">
+      <div className="flex res-image-box h-[300px]">
         <img
           className="w-full rounded-t-2xl res-img"
           alt="restaurant-image"
           src={CDN_URL + cloudinaryImageId}
         />
       </div>
-      <div className="p-5 res-details">
-        <div className="flex justify-between items-center res-details-top">
-          <h3 className="text-lg font-bold">{name}</h3>
-          <div className="bg-[#e8e8e8] rounded-full py-1 px-2 rating-icon">
+      <div className="flex flex-col h-fit p-5 gap-2 res-details">
+        <div className="flex justify-between align-top res-details-top">
+          <h3 className="text-base font-bold">{name}</h3>
+          <div className="flex h-fit bg-[#e8e8e8] rounded-full py-[5px] px-[6px] rating-icon">
             <p className="text-sm">{avgRating}</p>
           </div>
         </div>
@@ -37,11 +37,11 @@ const RestaurantCard = (props) => {
   );
 };
 
-export const withPromotedLabel = (RestaurantCard) => {
+export const withOpenLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <div>
-        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
+        <label className="absolute bg-green-400 text-black text-sm m-2 px-2 py-1 rounded-lg">Open</label>
         <RestaurantCard {...props}/>
       </div>
     );
