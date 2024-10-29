@@ -9,22 +9,24 @@ const BodyComponent = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
 
-  const resPromotedCard = withPromotedLabel(RestaurantCard);
+  const RestaurantPromotedCard = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const list = await fetch("https://run.mocky.io/v3/db194f20-d556-431f-90fb-a12040902470");
+    const list = await fetch('https://corsproxy.io/?' + encodeURIComponent('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING'));
     if (list.ok) {
       
       const json = await list.json();
-      const normalizedData = json.restaurants.map((restaurant) => ({
-          type: "restaurant",
-          data: restaurant
-        }));
-        
+      const normalizedData = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map((restaurant) => ({
+        type: "restaurant",
+        data: restaurant
+      }));
+      console.log({ json });
+      // const normalizedData = [];
+
       setListOfRestaurants(normalizedData);
       setAllRestaurants(normalizedData);
     }
@@ -35,7 +37,7 @@ const BodyComponent = () => {
   };
 
   return (
-    <div className="h-screen p-10 mainContainer">
+    <div className="p-10 mainContainer">
       <div className="flex flex-col gap-8 p-10 bodyContainer">
         <SearchContainer allRestaurants={allRestaurants} setListOfRestaurants={setListOfRestaurants} />
         <div className="flex justify-end gap-2 filtersContainer">
@@ -51,7 +53,7 @@ const BodyComponent = () => {
             className="top-filter-btn bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300"
             onClick={() => {
                 const filteredList = listOfRestaurants.filter(
-                    (restaurant) => restaurant.data.rating > 4 
+                    (restaurant) => restaurant.data.info.avgRating > 4 
                 );
                 setListOfRestaurants(filteredList);
             }}
@@ -63,10 +65,10 @@ const BodyComponent = () => {
             {listOfRestaurants.length === 0 ? (
               <Shimmer />
             ) : (
-            listOfRestaurants.map((restaurant) => (
-              <Link key={restaurant.data.id} to={"restaurants/" + restaurant.data.id}>
+            listOfRestaurants.map((restaurant, index) => (
+              <Link key={restaurant.data.info.id || index} to={"restaurants/" + restaurant.data.info.id}>
                 {
-                  restaurant.data.is_promoted == true ? (<resPromotedCard resData={restaurant} />) : (<RestaurantCard resData={restaurant} />)
+                  restaurant.data.info.is_promoted == true ? (<RestaurantPromotedCard resData={restaurant} />) : (<RestaurantCard resData={restaurant} />)
                 }
               </Link>
             ))
