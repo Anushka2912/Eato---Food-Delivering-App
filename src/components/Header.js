@@ -12,7 +12,7 @@ const HeaderComponent = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  const {loggedInUser} = useContext(createContext);
+  const {loggedInUser} = useContext(UserContext);
 
   return (
     <div className="flex justify-between items-center gap-10 p-2.5 px-8 border-b border-black headerContainer">
@@ -41,8 +41,8 @@ const HeaderComponent = () => {
             >
               {loginBtn}
             </button>
-            <p>{loggedInUser}</p>
           </li>
+          <li><p>{loggedInUser}</p></li>
         </ul>
       </div>
       <div className="flex justify-between gap-2 cartContainer ">
