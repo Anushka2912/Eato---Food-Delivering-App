@@ -1,15 +1,18 @@
 import logo from "../images/logo-eato.jpg";
 import userIcon from "../images/user-icon.jpg";
 import cartIcon from "../images/shopping-cart.jpg";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const HeaderComponent = () => {
 
   const [loginBtn, setLoginBtn] = useState("Login")
 
   const onlineStatus = useOnlineStatus();
+
+  const {loggedInUser} = useContext(createContext);
 
   return (
     <div className="flex justify-between items-center gap-10 p-2.5 px-8 border-b border-black headerContainer">
@@ -29,14 +32,16 @@ const HeaderComponent = () => {
           </li>
           <li>Online Status: {onlineStatus ? "Online" : "Offline"}</li>
           <li>
-            <button className="bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300" onClick={
-              () => {
-                loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login");
+            <button className="bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300" 
+              onClick={
+                () => {
+                  loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login");
+                }
               }
-            }
             >
               {loginBtn}
             </button>
+            <p>{loggedInUser}</p>
           </li>
         </ul>
       </div>
