@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/Header";
 import BodyComponent from "./components/Body";
@@ -8,14 +8,29 @@ import ContactComponent from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ErrorComponent from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserContext from "./utils/UserContext";
 
 const AppLayout = () => {
+
+    const [userName, setUserName] = useState();
+
+    //Dummy Authentication Logic
+    useEffect(() => {
+        //Make an API call and send username and password
+        const data = {
+            name: "Anushka Sharma",
+        }
+        setUserName(data.name);
+    }, []);
+
     return (
-        <div className="app">
-            <HeaderComponent />
-            <Outlet />
-            <FooterComponent />
-        </div>
+        <UserContext.Provider value={{ loggedInUser: userName }}>
+            <div className="app">
+                <HeaderComponent />
+                <Outlet />
+                <FooterComponent />
+            </div>
+        </UserContext.Provider>
     );
 };
 
