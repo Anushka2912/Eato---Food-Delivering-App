@@ -2,11 +2,11 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 import {ChevronDownIcon} from "@heroicons/react/24/outline";
 
-const RestaurantCategory = ({data}) => {
-    const [showItems, setShowItems] = useState(false);
+const RestaurantCategory = ({data , showItems, setShowIndex}) => {
+    //const [showItems, setShowItems] = useState(false);
 
     const handleClick = () => {
-        setShowItems(!showItems);
+        setShowIndex();
     };
 
     return (
