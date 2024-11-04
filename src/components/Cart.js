@@ -1,6 +1,6 @@
 const CartComponent = () => {
     return(
-        <div>
+        <div className="h-screen mainContainer">
             My Cart
         </div>
     );
