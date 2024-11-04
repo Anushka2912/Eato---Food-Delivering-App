@@ -16,6 +16,7 @@ const HeaderComponent = () => {
   const {loggedInUser} = useContext(UserContext);
 
   const cartItems = useSelector((store) => store.cart.items);
+  console.log({cartItems});
 
   return (
     <div className="flex justify-between items-center gap-10 p-2.5 px-8 border-b border-black headerContainer">
