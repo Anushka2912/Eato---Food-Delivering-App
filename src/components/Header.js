@@ -5,6 +5,7 @@ import { createContext, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const HeaderComponent = () => {
 
@@ -13,6 +14,8 @@ const HeaderComponent = () => {
   const onlineStatus = useOnlineStatus();
 
   const {loggedInUser} = useContext(UserContext);
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between items-center gap-10 p-2.5 px-8 border-b border-black headerContainer">
@@ -43,12 +46,13 @@ const HeaderComponent = () => {
             </button>
           </li>
           <li><p>{loggedInUser}</p></li>
+          <li className="flex gap-2"><img src={cartIcon} alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" />({cartItems.length})</li>
         </ul>
       </div>
-      <div className="flex justify-between gap-2 cartContainer ">
+      {/* <div className="flex justify-between gap-2 cartContainer ">
         <img src={userIcon} alt="user-icon" className="w-full max-w-[25px] h-auto userIcon" />
         <img src={cartIcon} alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" />
-      </div>
+      </div> */}
     </div>
   );
 };
