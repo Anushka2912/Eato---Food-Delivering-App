@@ -47,7 +47,7 @@ const HeaderComponent = () => {
             </button>
           </li>
           <li><p>{loggedInUser}</p></li>
-          <li className="flex gap-2"><img src={cartIcon} alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" />({cartItems.length})</li>
+          <li className="flex gap-2"><Link to="/cart" className="text-black"><img src={cartIcon} alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" /></Link>({cartItems.length})</li>
         </ul>
       </div>
       {/* <div className="flex justify-between gap-2 cartContainer ">
