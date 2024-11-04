@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
     const {resId} = useParams();
 
     const resMenuInfo = useRestaurantMenu(resId);
-    console.log(resMenuInfo);
+    
     const [showIndex, setShowIndex] = useState(null);
 
     const handleToggle = (index) => {
