@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
   } = resData?.data?.info;
 
   return (
-    <div className="w-[300px] border border-[#00000026] rounded-2xl shadow-[#00000026] res-card">
+    <div className="w-[340px] border border-[#00000026] rounded-2xl shadow-[#00000026] res-card">
       <div className="flex res-image-box h-[300px]">
         <img
           className="w-full rounded-t-2xl res-img"
