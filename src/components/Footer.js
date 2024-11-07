@@ -9,8 +9,8 @@ const FooterComponent = () => {
                 </div>
             </div> */}
             <div className="py-10 footer-middle">
-                <div className="flex flex-wrap justify-between max-w-screen-xl mx-auto footer-inner-row">
-                    <div className="footer-div" id="company-information-section">
+                <div className="flex flex-wrap justify-between max-w-[1920px] m-auto footer-inner-row">
+                    <div className="flex flex-col gap-5 company-information-section">
                         <div className="company-logo">
                             <img src={footerLogo} alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
                         </div>
@@ -22,7 +22,7 @@ const FooterComponent = () => {
                             <img></img>
                         </div>
                     </div>
-                    <div className="footer-div" id="quick-links-section">
+                    <div className="flex flex-col gap-5 quick-links-section">
                         <div className="footer-title">
                             <h4 className="text-lg font-bold">Quick Links</h4>
                         </div>
@@ -37,7 +37,7 @@ const FooterComponent = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="footer-div" id="useful-links-section">
+                    <div className="flex flex-col gap-5 useful-links-section">
                         <div className="footer-title">
                             <h4 className="text-lg font-bold">Useful Links</h4>
                         </div>
@@ -52,7 +52,7 @@ const FooterComponent = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="footer-div" id="contact-section">
+                    <div className="flex flex-col gap-5 contact-section">
                         <div className="footer-title">
                             <h4 className="text-lg font-bold">Contact Us</h4>
                         </div>
@@ -60,7 +60,7 @@ const FooterComponent = () => {
                             
                         </div>
                     </div>
-                    <div className="footer-div" id="download-app-section">
+                    <div className="flex flex-col gap-5 download-app-section">
                         <div className="footer-title">
                             <h4 className="text-lg font-bold">Download App</h4>
                         </div>
@@ -71,7 +71,7 @@ const FooterComponent = () => {
                 </div>
             </div>
             <div className="bg-gray-800 py-4 footer-bottom">
-                <div className="max-w-screen-xl mx-auto flex justify-between items-center footer-inner-row">
+                <div className="flex justify-between items-center max-w-[1920px] m-auto footer-inner-row">
                     <div className="copyright-section">
                         <p>© 2024, Eato, All Rights Reserved</p>
                     </div>
