@@ -1,6 +1,3 @@
-import logo from "../images/logo-eato.jpg";
-import userIcon from "../images/user-icon.jpg";
-import cartIcon from "../images/shopping-cart.jpg";
 import { createContext, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -20,7 +17,7 @@ const HeaderComponent = () => {
   return (
     <div className="flex justify-between items-center gap-10 px-[30px] py-[20px] border-b border-black headerContainer">
       <div className="logoContainer">
-        <img src={logo} alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
+        <img src="/images/logo-eato.jpg" alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
       </div>
       <div className="w-full flex justify-end navContainer">
         <ul className="flex justify-between items-center gap-5 list-none">
@@ -46,7 +43,7 @@ const HeaderComponent = () => {
             </button>
           </li>
           <li><p>{loggedInUser}</p></li>
-          <li className="flex gap-2"><Link to="/cart" className="text-black"><img src={cartIcon} alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" /></Link>({cartItems.length})</li>
+          <li className="flex gap-2"><Link to="/cart" className="text-black"><img src="/images/shopping-cart.jpg" alt="cart-icon" className="w-full max-w-[25px] h-auto cartIcon" /></Link>({cartItems.length})</li>
         </ul>
       </div>
       {/* <div className="flex justify-between gap-2 cartContainer ">

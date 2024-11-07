@@ -1,5 +1,3 @@
-import footerLogo from "../images/logo-eato-footer.png";
-
 const FooterComponent = () => {
     return (
         <div className="bg-gray-900 text-white footer-container">
@@ -12,7 +10,7 @@ const FooterComponent = () => {
                 <div className="flex flex-wrap justify-between max-w-[1920px] m-auto footer-inner-row">
                     <div className="flex flex-col gap-5 company-information-section">
                         <div className="company-logo">
-                            <img src={footerLogo} alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
+                            <img src="/images/logo-eato-footer.png" alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
                         </div>
                         <p>Providing the best food experience, straight to your door.</p>
                         <div className="flex gap-4 social-links">

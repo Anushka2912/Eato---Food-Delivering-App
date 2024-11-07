@@ -1,4 +1,3 @@
-import searchIcon from "../images/search-icon.jpg";
 import { useState } from "react";
 
 const SearchContainer = ({allRestaurants, setListOfRestaurants}) => {
@@ -19,7 +18,7 @@ const SearchContainer = ({allRestaurants, setListOfRestaurants}) => {
   return (
     <div className="flex justify-center items-center w-full max-w-[580px] bg-white border border-black rounded-full search-Box">
       <button className="bg-white border-0 search-btn" onClick={handleSearch}>
-        <img src={searchIcon} alt="search-icon-image" className="max-w-[15px]" />
+        <img src="/images/search-icon.jpg" alt="search-icon-image" className="max-w-[15px]" />
       </button>
       <input 
         type="text" 
