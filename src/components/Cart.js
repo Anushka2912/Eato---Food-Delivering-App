@@ -20,7 +20,7 @@ const CartComponent = () => {
                     <img src="https://i.ibb.co/DKz2yTZ/empty-cart.png" alt="empty-cart" className="w-[280px] mb-8"></img>
                     <h2 className="text-xl font-semibold mb-2">Your cart is empty</h2>
                     <p className="text-sm text-gray-500 mb-2">You can go to home page to view more restaurants</p>
-                    <Link to="/home"><button className="mt-4 bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300 errBtn global-btn">Go back to homepage</button></Link>
+                    <Link to="/"><button className="mt-4 bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300 errBtn global-btn">Go back to homepage</button></Link>
                 </div> 
                 :
                 <div className="flex flex-col gap-14 w-8/12 m-auto p-12 cartContainer">

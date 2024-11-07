@@ -25,7 +25,7 @@ const HeaderComponent = () => {
       <div className="w-full flex justify-end navContainer">
         <ul className="flex justify-between items-center gap-5 list-none">
           <li>
-            <Link to="/home" className="text-black">Home</Link>
+            <Link to="/" className="text-black">Home</Link>
           </li>
           <li>
             <Link to="/about" className="text-black">About Us</Link>
