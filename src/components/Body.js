@@ -24,8 +24,6 @@ const BodyComponent = () => {
         type: "restaurant",
         data: restaurant
       }));
-      console.log({ json });
-      // const normalizedData = [];
 
       setListOfRestaurants(normalizedData);
       setAllRestaurants(normalizedData);
