@@ -144,6 +144,7 @@ const config = {
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
+  transformIgnorePatterns: ["node_modules/(?!@testing-library)"],
   // The test environment that will be used for testing
   testEnvironment: "jsdom",
 
