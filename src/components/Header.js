@@ -18,7 +18,7 @@ const HeaderComponent = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between items-center gap-10 p-2.5 px-8 border-b border-black headerContainer">
+    <div className="flex justify-between items-center gap-10 px-[30px] py-[20px] border-b border-black headerContainer">
       <div className="logoContainer">
         <img src={logo} alt="company-logo-image" className="w-full max-w-[80px] h-auto mainLogo" />
       </div>

@@ -17,13 +17,13 @@ const SearchContainer = ({allRestaurants, setListOfRestaurants}) => {
   }
 
   return (
-    <div className="flex justify-center items-center max-w-[580px] w-full bg-white border border-[#c5c5c5] rounded-full search-Box">
+    <div className="flex justify-center items-center w-full max-w-[580px] bg-white border border-black rounded-full search-Box">
       <button className="bg-white border-0 search-btn" onClick={handleSearch}>
         <img src={searchIcon} alt="search-icon-image" className="max-w-[15px]" />
       </button>
       <input 
         type="text" 
-        className="w-full max-w-[500px] p-4 rounded-full border-0 focus:outline-none search-input" 
+        className="w-full max-w-[500px] p-3 rounded-full border-0 focus:outline-none search-input" 
         placeholder="Search..." 
         value={searchText} 
         onChange={(e) => setSearchText(e.target.value)}

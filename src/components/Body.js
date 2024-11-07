@@ -37,31 +37,33 @@ const BodyComponent = () => {
   };
 
   return (
-    <div className="p-10 mainContainer">
+    <div className="p-10 h-auto w-full max-w-[2100px] m-auto mainContainer">
       <div className="flex flex-col gap-8 p-10 bodyContainer">
-        <SearchContainer allRestaurants={allRestaurants} setListOfRestaurants={setListOfRestaurants} />
-        <div className="flex justify-end gap-2 filtersContainer">
+        <div className="flex justify-between gap-2 mb-6">
+          <div className="flex w-fit justify-between gap-2 filtersContainer">
             <button
-            className="all-filter-btn bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300"
-            onClick={() => {
+              className="all-filter-btn bg-black border border-black rounded-full text-white py-[8px] px-[30px] hover:bg-transparent hover:text-black hover:border-black"
+              onClick={() => {
                 setListOfRestaurants(allRestaurants);
-            }}
+              }}
             >
             All
             </button>
             <button
-            className="top-filter-btn bg-black border border-black rounded-full text-white py-1 px-4 hover:bg-transparent hover:text-black hover:border-black transition-colors duration-300"
-            onClick={() => {
+              className="top-filter-btn bg-black border border-black rounded-full text-white py-[8px] px-[30px] hover:bg-transparent hover:text-black hover:border-black"
+              onClick={() => {
                 const filteredList = listOfRestaurants.filter(
-                    (restaurant) => restaurant.data.info.avgRating > 4.5 
+                  (restaurant) => restaurant.data.info.avgRating > 4.5 
                 );
                 setListOfRestaurants(filteredList);
-            }}
+              }}
             >
             Top Rated Restaurants
             </button>
+          </div>
+          <SearchContainer allRestaurants={allRestaurants} setListOfRestaurants={setListOfRestaurants} />
         </div>
-        <div className="w-full flex flex-wrap justify-start gap-y-9 gap-x-9 restaurantContainer">
+        <div className="w-full flex flex-wrap justify-between gap-y-9 gap-x-9 restaurantContainer">
             {listOfRestaurants.length === 0 ? (
               <Shimmer />
             ) : (
