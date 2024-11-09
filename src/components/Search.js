@@ -5,11 +5,13 @@ const SearchContainer = ({allRestaurants, setListOfRestaurants}) => {
   const [searchText, setSearchText] = useState("");
 
   const handleSearch = () => {
+    console.log({searchText, allRestaurants});
     if (searchText.trim() === "") {
       setListOfRestaurants(allRestaurants);
     } else {
       const searchList = allRestaurants.filter((result) => {
-        const name = result.data?.name || "";
+        console.log({result});
+        const name = result?.data?.info?.name || "";
         return name.toLowerCase().includes(searchText.toLowerCase());
       });
       setListOfRestaurants(searchList);
